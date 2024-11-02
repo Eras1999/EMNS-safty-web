@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./weatherdetails.css">
+</head>
+<body>
+    <div id="weather-container">
+        <h2>Weather App</h2>
+        <input type="text" id="city1" placeholder="Enter first city (e.g., Colombo)">
+        <input type="text" id="city2" placeholder="Enter second city (e.g., Nugegoda)">
+        <button onclick="getWeather()">Search</button>
+
+        <img id="weather-icon" alt="Weather Icon" style="display: none;">
+
+        <div id="temp-div"></div>
+        <div id="weather-info"></div>
+        <div id="hourly-forecast"></div>
+        <div id="speed-limit"></div>
+    </div>
+
+    
+    <script src="./weatherdetails.js"></script>
+
+    
+        <div class="learn-more text-center">
+            <button onclick="window.location.href='ers.html'" class="btn btn-secondary" id="learn-more-btn">Inquire</button>
+        </div>
+
+
+           <div class="learn-more text-center">
+            <button onclick="window.location.href='index.html'" class="btn btn-secondary" id="learn-more-btn">Go to Home Page</button>
+        </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved readability */
+}
+
+
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 3em; /* Increased font size */
+}
+
+h2 {
+    margin-bottom: 20px; /* Adjusted margin for better spacing */
+    font-size: 2em; /* Increased font size for section headings */
+    color: #007bff; /* Added color to section headings */
+}
+
+.about-content {
+    background: white;
+    padding: 40px; /* Increased padding */
+    border-radius: 10px; /* Increased border radius for smoother corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+    max-width: 800px; /* Increased max-width for wider content */
+    margin: 50px auto;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.about-content:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.about-content p {
+    margin: 15px 0; /* More space between paragraphs */
+    text-align: justify; /* Justified text for a cleaner look */
+    line-height: 1.8; /* Increased line height for better readability */
+}
+
+.card {
+    background: #e9ecef; /* Light background for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding for card content */
+    margin: 20px 0; /* Margin between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Card shadow */
+    transition: transform 0.2s; /* Smooth effect on hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.learn-more {
+    text-align: center; /* Center align button */
+    margin-top: 30px; /* Space above button */
+}
+
+.learn-more button {
+    background: #007bff;
+    color: white;
+    padding: 12px 25px; /* Increased padding for a larger button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Increased font size */
+    transition: background 0.3s, transform 0.3s; /* Transition for smooth effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+.learn-more button:hover {
+    background: #0056b3;
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px 0; /* Increased padding */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px; /* More space above footer */
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.2); /* Added shadow for footer */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 0.9em; /* Smaller font size for footer text */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em; /* Adjust heading size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.6em; /* Adjust section heading size */
+    }
+
+    .about-content {
+        padding: 20px; /* Less padding for smaller screens */
+    }
+
+    .learn-more button {
+        font-size: 16px; /* Smaller button font size */
+        padding: 10px 20px; /* Adjust padding */
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ers.css">
+    <title>Emergency Response System</title>
+    <style>
+        /* Add some basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Style for accident data */
+        .accident-data {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .accident-data h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .accident-data ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .accident-data li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emergency Response Notification</h1>
+        <form action="notify.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="location">Select Your City:</label>
+            <select id="location" name="location" required>
+                <option value="">-- Select City --</option>
+                <option value="Colombo">Colombo</option>
+                <option value="Kandy">Kandy</option>
+                <option value="Galle">Galle</option>
+                <option value="Negombo">Negombo</option>
+                <option value="Jaffna">Jaffna</option>
+                <option value="Batticaloa">Batticaloa</option>
+                <option value="Matara">Matara</option>
+                <option value="Kurunegala">Kurunegala</option>
+                <option value="Anuradhapura">Anuradhapura</option>
+                <option value="Pollonnaruwa">Pollonnaruwa</option>
+                <option value="Dambulla">Dambulla</option>
+                <option value="Ratnapura">Ratnapura</option>
+                <option value="Trincomalee">Trincomalee</option>
+                <option value="Nuwara Eliya">Nuwara Eliya</option>
+                <option value="Vavuniya">Vavuniya</option>
+                <option value="Puttalam">Puttalam</option>
+            </select>
+
+            <label for="accidentType">Type of Accident:</label>
+            <select id="accidentType" name="accidentType" required>
+                <option value="Car Accident">Car Accident</option>
+                <option value="Medical Emergency">Medical Emergency</option>
+                <option value="Fire">Fire</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="details">Additional Details:</label>
+            <textarea id="details" name="details" rows="4" placeholder="Any additional information..."></textarea>
+
+            <button type="submit">Notify Emergency Services</button>
+        </form>
+    </div>
+
+    <!-- Display Accident Data from the Database -->
+    <div class="accident-data">
+        <?php include 'fetch_accident_data.php'; ?>
+    </div>
+
+
+
+    <div class="learn-more text-center">
+        <button onclick="window.location.href='report.php'" class="btn btn-secondary" id="learn-more-btn">Current Reports</button>
+    </div>
+    
+</body>
+</html>
